@@ -16,7 +16,7 @@ function HomePage(props) {
     
     useEffect(()=>{
         console.log(user_email);
-        fetch('http://localhost:9000/notes/new',{
+        fetch('https://note-app-test-pe9o.onrender.com/notes/new',{
             method:'POST', 
             headers:{
                 "Content-Type":"application/json",
@@ -40,7 +40,7 @@ function HomePage(props) {
             body:formValue
         };
         console.log(formValue);
-        fetch('http://localhost:9000/notes/add',{
+        fetch('https://note-app-test-pe9o.onrender.com/notes/add',{
             method:'POST',
             headers:{
                 "Content-Type":"application/json",
