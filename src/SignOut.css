@@ -1,0 +1,10 @@
+#btn{
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem;
+    font-weight:bolder;
+}
+#btn:hover{
+    cursor:pointer;
+    scale:1.1;
+}
