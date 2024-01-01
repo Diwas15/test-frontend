@@ -29,6 +29,7 @@ function HomePage(props) {
         })
         .catch((e)=>console.log(e));
         //console.log(notes)
+        setFormValue('');
 
         
        
@@ -70,8 +71,8 @@ function HomePage(props) {
             </div>
             <div className="notes_adder">
                 <form>
-                    <textarea name="notes" id="_text_" cols="60" rows="20" placeholder="write your notes" onChange={(e)=>setFormValue(e.target.value)}></textarea>
-                    <div className="form_btn"><button id="f_btn" onClick={(e)=>{handleAdd(e)}}>Add</button></div>
+                    <textarea name="notes" value={formValue} id="_text_" cols="60" rows="20" placeholder="write your notes" onChange={(e)=>setFormValue(e.target.value)}></textarea>
+                    <div className="form_btn"><button id="f_btn" disabled={!formValue} onClick={(e)=>{handleAdd(e)}}>Add</button></div>
                 </form>
             </div>
           </div>
