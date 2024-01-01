@@ -14,9 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<SignIn/>}/>
-          <Route index element={<SignIn/>}/>
           <Route path='/HomePage' element={<HomePage/>}/>
-          <Route index element={<HomePage/>}/>
           <Route path='*' element={<Navigate to="/" replace />}/>
         </Routes>
       </BrowserRouter>
