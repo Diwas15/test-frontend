@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import SignIn from './SignIn';
 import NoPage from './NoPage';
 
-import {BrowserRouter,Routes,Route,} from 'react-router-dom'
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 
 function App() {
   return (
