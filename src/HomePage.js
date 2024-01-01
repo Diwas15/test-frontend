@@ -14,7 +14,25 @@ function HomePage(props) {
     const [formValue,setFormValue]=useState();
     const [notes,setNotes]=useState([]);
     
+    useEffect(()=>{
+        console.log(user_email);
+        fetch('https://note-app-test-pe9o.onrender.com/notes/new',{
+            method:'POST', 
+            headers:{
+                "Content-Type":"application/json",
+                Accept:"application/json"
+            },
+            body:JSON.stringify({user:user_email})
+        }).then((res)=>res.json()).then((data)=>{
+            setNotes(data);
+            //console.log(data);
+        })
+        .catch((e)=>console.log(e));
+        //console.log(notes)
 
+        
+       
+    },[])
     const handleAdd = (e)=>{
         e.preventDefault();
         const data={
