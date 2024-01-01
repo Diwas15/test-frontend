@@ -32,7 +32,7 @@ function HomePage(props) {
 
         
        
-    },[notes])
+    },[])
     const handleAdd = (e)=>{
         e.preventDefault();
         const data={
