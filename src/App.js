@@ -17,7 +17,7 @@ function App() {
           <Route index element={<SignIn/>}/>
           <Route path='/HomePage' element={<HomePage/>}/>
           <Route index element={<HomePage/>}/>
-          <Route path='*' element={<NoPage/>}/>
+          <Route path='*' element={<Navigate to="/" replace />}/>
         </Routes>
       </BrowserRouter>
     </div>
