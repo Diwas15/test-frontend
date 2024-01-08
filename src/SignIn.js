@@ -7,7 +7,7 @@ function SignIn() {
     const history=useNavigate();
     function handleCredentialResponse(response){
       var obj = jwtDecode(response.credential);
-      //console.log(obj);
+      //console.log("this is user details:"+obj);
       history('/HomePage',{state:{email:obj.email}});
       
     }
