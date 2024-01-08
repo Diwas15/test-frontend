@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     margin: 0 1rem 1rem 2.3rem;
+    z-index: 1;
+    
 }
 
 .control_buttons{
@@ -11,7 +13,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 4px;
+    margin: 14px 0;
+    z-index: 1;
 }
 
 #edit{
@@ -21,6 +24,11 @@
     background-color: green;
     color:white;
     border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+#edit:hover{
+    cursor: pointer;
+    scale: 1.1;
 }
 
 #delete{
@@ -30,21 +38,105 @@
     background-color: red;
     color:white;
     border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
+#delete:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
 
 .saved_note{
     display: flex;
     flex-wrap: wrap;
     overflow:hidden;
-    border: 1px solid blue;
+    padding: .3rem;
+    /* border: 1px solid blue; */
     border-radius: .4rem;
     width:9rem;
     height: 10rem;
     font-size: small;
     color: rgb(33, 33, 33);
-   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     
 }
 .saved_note p{
-    margin: 7px;
+    /* margin: 7px;
+     */
+}
+
+.pop_up{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: 6rem;
+    left: 4rem;
+    z-index: 100;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    
+    /* border: 2px solid red; */
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.not_visible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+#note_frm{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgb(24, 4, 8); */
+    width: 500px;
+    height: 100%;
+
+}
+.cancel{
+    /* border: 1px solid red; */
+    display: flex;
+    border: none;
+    background-color: white;
+    height: 2rem;
+    width:100%;
+}
+
+.cancel>button:hover{
+    cursor: pointer;
+}
+.cancel>button{
+    position: relative;
+    margin-left: auto;
+    width: 2rem;
+}
+
+
+#_text_{
+    box-sizing: border-box;
+    padding: .8rem;
+    resize: none;
+}
+
+.update{
+    background-color: rgb(34, 195, 34);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 45%;
+    padding: .5rem;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.update:hover{
+    cursor: pointer;
 }
