@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import SignIn from './SignIn';
 import NoPage from './NoPage';
 
-import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
+import {BrowserRouter,Routes,Route,} from 'react-router-dom'
 
 function App() {
   return (
@@ -15,10 +15,8 @@ function App() {
         <Routes>
           <Route path='/' element={<SignIn/>}/>
           <Route index element={<SignIn/>}/>
-          <Route path='/HomePage' element={<HomePage/>}/>
-          <Route path='/#!/HomePage' element={<HomePage/>}/>
+          <Route path='/HomePage' element={<HomePage/>}/> 
           <Route path='*' element={<NoPage/>}/>
-{/*<Route path='*' element={<Navigate to="/" replace />}/>*/}
         </Routes>
       </BrowserRouter>
     </div>
