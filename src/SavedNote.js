@@ -20,7 +20,7 @@ function SavedNote(props) {
   //console.log("lo "+props.__id);
   const deleteAction=(e)=>{
     //console.log("this is note ID: "+props.__id);
-    fetch('http://localhost:9000/notes/delete',{
+    fetch('https://note-app-test-pe9o.onrender.com/notes/delete',{
             method:'DELETE', 
             headers:{
                 "Content-Type":"application/json",
@@ -45,7 +45,7 @@ function SavedNote(props) {
       email:email,
       new_body:update_value
     }
-        fetch('http://localhost:9000/notes/update',{
+        fetch('https://note-app-test-pe9o.onrender.com/notes/update',{
             method:'PUT', 
             headers:{
                 "Content-Type":"application/json",
